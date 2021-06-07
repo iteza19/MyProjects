@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    //cucumber
+    testImplementation 'io.cucumber:cucumber-java:6.1.1'
+    testImplementation 'io.cucumber:cucumber-junit:6.1.1'
+
+    //rest assured
+    testImplementation 'io.rest-assured:rest-assured:4.3.3'
+    testImplementation 'io.rest-assured:json-path:4.3.3'
+    testImplementation 'io.rest-assured:xml-path:4.3.3'
+    testImplementation 'io.rest-assured:json-schema-validator:4.3.3'
+    testImplementation 'io.rest-assured:spring-mock-mvc:4.3.3'
+    testImplementation 'io.rest-assured:spring-web-test-client:4.3.3'
+
+    testImplementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.1'
+
+    //selenium
+    compile 'org.seleniumhq.selenium:selenium-server:2.44.0'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '4.0.0-alpha-4'
+    testImplementation 'org.testng:testng:6.1.1'
+    compile group: 'com.google.guava', name: 'guava', version: '23.6-jre'
+
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+}
