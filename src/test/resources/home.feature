@@ -1,6 +1,6 @@
+@home
 Feature: testing epic home
 
-  @home
   Scenario: play 1 song from home
     Given user in home page
     When user click thumbnail song from quick picks

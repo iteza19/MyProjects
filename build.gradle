@@ -14,8 +14,8 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 
     //cucumber
-    testImplementation 'io.cucumber:cucumber-java:6.1.1'
-    testImplementation 'io.cucumber:cucumber-junit:6.1.1'
+    testImplementation 'io.cucumber:cucumber-java8:6.10.4'
+    testImplementation 'io.cucumber:cucumber-junit:6.10.4'
 
     //rest assured
     testImplementation 'io.rest-assured:rest-assured:4.3.3'
